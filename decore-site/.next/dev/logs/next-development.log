@@ -1,0 +1,13 @@
+[00:00:00.864] Server  LOG      ✓ Ready in 585ms
+[00:02:58.527] Server  LOG      ✓ Compiled in 97ms
+[00:03:14.288] Browser WARN    'oklab(0.999994 0.0000455678 0.0000200868 / 0.3)' is not an animatable color. Use the equivalent color code instead.
+[00:04:35.818] Server  LOG      ✓ Compiled in 71ms
+[00:04:47.946] Server  LOG      ✓ Compiled in 27ms
+[00:12:44.828] Server  LOG      ✓ Compiled in 54ms
+[00:17:00.915] Server  LOG      ✓ Compiled in 63ms
+[00:18:54.280] Server  LOG      ✓ Compiled in 111ms
+[00:24:46.941] Server  LOG      ✓ Compiled in 71ms
+[00:24:47.805] Server  LOG      ✓ Compiled in 19ms
+[00:27:53.650] Server  LOG      ✓ Compiled in 158ms
+[00:29:25.542] Server  LOG      ✓ Compiled in 158ms
+[00:30:35.143] Server  LOG      ✓ Compiled in 60ms
