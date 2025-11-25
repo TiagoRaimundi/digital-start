@@ -1,3 +1,0 @@
-module.exports=[33290,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsxs)("html",{lang:"pt-BR",children:[(0,b.jsx)("head",{children:(0,b.jsx)("link",{href:"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap",rel:"stylesheet"})}),(0,b.jsx)("body",{children:a})]})}a.s(["default",()=>c,"metadata",0,{title:"Decore Tintas Xanxerê | +2000 Cores Disponíveis",description:"Loja de tintas e acessórios para pintura. As melhores marcas e preços! Coral, AkzoNobel e mais.",keywords:["tintas xanxere","decore tintas","coral tintas","pintura","decoracao"]}])}];
-
-//# sourceMappingURL=app_layout_tsx_271801d7._.js.map
