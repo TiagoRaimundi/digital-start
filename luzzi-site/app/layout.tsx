@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     "eletrica xanxere",
   ],
   icons: {
-    icon: "/images/favicon.ico",
-    apple: "/images/favicon.png",
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
@@ -36,10 +36,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/images/favicon-32x32.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/images/favicon-64x64.png" type="image/png" sizes="64x64" />
-        <link rel="icon" href="/images/favicon-192x192.png" type="image/png" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/images/favicon-192x192.png" />
+        <link rel="icon" href="/images/logo.png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
         <meta name="theme-color" content="#1e293b" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
