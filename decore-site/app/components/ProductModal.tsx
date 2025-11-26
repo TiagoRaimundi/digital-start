@@ -185,7 +185,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-lg shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300"
                 >
                   <MessageCircle size={24} />
-                  Solicitar Orçamento
+                  Fazer Pedido
                 </motion.a>
 
                 <motion.button
