@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <Header isScrolled={isScrolled} />
+      <Header />
       <HeroSection />
       <EspecialidadesSection />
       <SobreSection />
