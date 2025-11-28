@@ -112,7 +112,7 @@ export default function Header({ onRegisterClick }: HeaderProps) {
                 display: "block",
               }}
             >
-              Fidelização
+              Cash
             </div>
           </div>
         </Link>

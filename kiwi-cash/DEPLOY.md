@@ -36,7 +36,7 @@ vercel --prod
 #### Passo 2: Fazer Push do Código
 
 ```bash
-cd cacau-cash
+cd kiwi-cash
 
 # Inicializar git
 git init
@@ -45,7 +45,7 @@ git init
 git add .
 
 # Commit
-git commit -m "🍫 CacauCash - Sistema Universal de Pontos"
+git commit -m "🥝 Kiwi Cash - Sistema Universal de Pontos"
 
 # Conectar ao GitHub (substitua SEU_USUARIO e SEU_REPO)
 git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
@@ -95,8 +95,8 @@ npm run dev
 
 Após o deploy, você terá:
 
-- **URL de Preview**: `https://cacau-cash-xxx.vercel.app`
-- **URL de Produção**: `https://cacau-cash.vercel.app`
+- **URL de Preview**: `https://kiwi-cash-xxx.vercel.app`
+- **URL de Produção**: `https://kiwi-cash.vercel.app`
 
 ### Configurar Domínio Próprio
 
@@ -125,7 +125,7 @@ Edite `app/globals.css`:
 Edite em cada página:
 
 ```tsx
-🍫 CacauCash  →  Seu Nome
+🥝 Kiwi Cash  →  Seu Nome
 ```
 
 ---
@@ -133,7 +133,7 @@ Edite em cada página:
 ## 📊 Estrutura do Projeto
 
 ```
-cacau-cash/
+kiwi-cash/
 ├── app/
 │   ├── page.tsx                    # Landing page
 │   ├── layout.tsx                  # Layout raiz
@@ -223,7 +223,7 @@ export async function POST(request: Request) {
 
 ## 💰 Monetização
 
-O CacauCash pode ser vendido como:
+O Kiwi Cash pode ser vendido como:
 
 1. **SaaS Mensal**: R$ 49 - R$ 249/mês
 2. **Por Transação**: R$ 0,05 por compra registrada
@@ -245,7 +245,7 @@ O CacauCash pode ser vendido como:
 ## 📞 Suporte
 
 Para dúvidas:
-- 📧 suporte@cacaucash.com.br
+- 📧 suporte@kiwicash.com.br
 - 💬 Chat no dashboard
 - 📚 Docs completos
 
@@ -265,4 +265,4 @@ Incluso no projeto:
 
 **Desenvolvido com ❤️ usando Next.js + TypeScript**
 
-🍫 Transforme cada compra em fidelidade!
+🥝 Transforme cada compra em recompensas!

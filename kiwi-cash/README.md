@@ -1,6 +1,6 @@
 # 🥝 Kiwi Cash - Sistema Universal de Pontos e Cashback
 
-**Plataforma SaaS para qualquer tipo de empresa criar seu programa de fidelidade**
+**Plataforma SaaS para qualquer tipo de empresa criar seu programa de pontos e cashback**
 
 ---
 
@@ -196,10 +196,10 @@ Saldo restante: 2 pontos
 
 ## 📞 Suporte
 
-- 📧 Email: suporte@cacaucash.com.br
+- 📧 Email: suporte@kiwicash.com.br
 - 💬 Chat: Disponível no dashboard
-- 📚 Documentação: docs.cacaucash.com.br
-- 🎥 Tutoriais: youtube.com/cacaucash
+- 📚 Documentação: docs.kiwicash.com.br
+- 🎥 Tutoriais: youtube.com/kiwicash
 
 ---
 
@@ -236,4 +236,4 @@ O nome transmite valor, recompensa e uma experiência moderna e natural!
 
 **Desenvolvido com ❤️ no Brasil**
 
-🥝 Transforme cada compra em uma experiência que fideliza!
+🥝 Transforme cada compra em recompensas cash!
