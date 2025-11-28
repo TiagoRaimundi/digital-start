@@ -9,6 +9,7 @@ interface HeaderProps {
 
 export default function Header({ onRegisterClick }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +46,7 @@ export default function Header({ onRegisterClick }: HeaderProps) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "0 2rem",
+          padding: "0 1rem",
         }}
       >
         {/* Logo */}
@@ -54,25 +55,20 @@ export default function Header({ onRegisterClick }: HeaderProps) {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.8rem",
+            gap: "0.6rem",
             textDecoration: "none",
             transition: "all 0.3s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
+            zIndex: 1001,
           }}
         >
-          {/* Logo Container com efeito */}
+          {/* Logo Container */}
           <div
             style={{
               background: scrolled
                 ? "linear-gradient(135deg, #10b981 0%, #059669 100%)"
                 : "rgba(255,255,255,0.2)",
-              padding: "0.6rem",
-              borderRadius: "16px",
+              padding: "0.5rem",
+              borderRadius: "12px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -85,7 +81,7 @@ export default function Header({ onRegisterClick }: HeaderProps) {
           >
             <span
               style={{
-                fontSize: "1.8rem",
+                fontSize: "1.5rem",
                 filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))",
               }}
             >
@@ -96,7 +92,7 @@ export default function Header({ onRegisterClick }: HeaderProps) {
           <div>
             <span
               style={{
-                fontSize: "1.6rem",
+                fontSize: "clamp(1.3rem, 4vw, 1.6rem)",
                 fontWeight: 800,
                 letterSpacing: "0.5px",
                 color: scrolled ? "#1f2937" : "white",
@@ -107,12 +103,13 @@ export default function Header({ onRegisterClick }: HeaderProps) {
             </span>
             <div
               style={{
-                fontSize: "0.65rem",
+                fontSize: "0.6rem",
                 fontWeight: 600,
                 letterSpacing: "1px",
                 color: scrolled ? "#10b981" : "rgba(255,255,255,0.8)",
                 marginTop: "-2px",
                 textTransform: "uppercase",
+                display: "block",
               }}
             >
               Fidelização
@@ -120,13 +117,14 @@ export default function Header({ onRegisterClick }: HeaderProps) {
           </div>
         </Link>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <div
           style={{
             display: "flex",
             gap: "0.5rem",
             alignItems: "center",
           }}
+          className="desktop-nav"
         >
           {[
             { href: "#como-funciona", label: "Como Funciona" },
@@ -143,8 +141,8 @@ export default function Header({ onRegisterClick }: HeaderProps) {
                 padding: "0.6rem 1.2rem",
                 borderRadius: "12px",
                 transition: "all 0.2s",
-                position: "relative",
                 textDecoration: "none",
+                whiteSpace: "nowrap",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = scrolled
@@ -191,7 +189,7 @@ export default function Header({ onRegisterClick }: HeaderProps) {
               transition: "all 0.3s",
               textDecoration: "none",
               display: "inline-block",
-              border: scrolled ? "none" : "2px solid transparent",
+              whiteSpace: "nowrap",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
@@ -209,7 +207,142 @@ export default function Header({ onRegisterClick }: HeaderProps) {
             Entrar
           </Link>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            display: "none",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            padding: "0.5rem",
+            zIndex: 1001,
+          }}
+          className="mobile-menu-btn"
+          aria-label="Menu"
+        >
+          <div
+            style={{
+              width: "24px",
+              height: "2px",
+              background: scrolled ? "#1f2937" : "white",
+              borderRadius: "2px",
+              transition: "all 0.3s",
+              transform: mobileMenuOpen
+                ? "rotate(45deg) translateY(8px)"
+                : "none",
+            }}
+          />
+          <div
+            style={{
+              width: "24px",
+              height: "2px",
+              background: scrolled ? "#1f2937" : "white",
+              borderRadius: "2px",
+              margin: "6px 0",
+              transition: "all 0.3s",
+              opacity: mobileMenuOpen ? 0 : 1,
+            }}
+          />
+          <div
+            style={{
+              width: "24px",
+              height: "2px",
+              background: scrolled ? "#1f2937" : "white",
+              borderRadius: "2px",
+              transition: "all 0.3s",
+              transform: mobileMenuOpen
+                ? "rotate(-45deg) translateY(-8px)"
+                : "none",
+            }}
+          />
+        </button>
       </nav>
+
+      {/* Mobile Menu */}
+      <div
+        style={{
+          position: "fixed",
+          top: scrolled ? "64px" : "72px",
+          left: 0,
+          right: 0,
+          background: "white",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+          transform: mobileMenuOpen ? "translateX(0)" : "translateX(100%)",
+          transition: "transform 0.3s ease",
+          zIndex: 999,
+          display: "none",
+        }}
+        className="mobile-menu"
+      >
+        <div
+          style={{
+            padding: "1.5rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.5rem",
+          }}
+        >
+          {[
+            { href: "#como-funciona", label: "Como Funciona" },
+            { href: "#segmentos", label: "Segmentos" },
+            { href: "#precos", label: "Preços" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              style={{
+                color: "#1f2937",
+                fontWeight: 600,
+                fontSize: "1.1rem",
+                padding: "1rem",
+                borderRadius: "12px",
+                textDecoration: "none",
+                transition: "all 0.2s",
+                background: "transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "rgba(16, 185, 129, 0.1)";
+                e.currentTarget.style.color = "#10b981";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#1f2937";
+              }}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          <div
+            style={{
+              height: "1px",
+              background: "#e5e7eb",
+              margin: "0.5rem 0",
+            }}
+          />
+
+          <Link
+            href="/loja/dashboard"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+              color: "white",
+              padding: "1rem",
+              borderRadius: "12px",
+              fontWeight: 700,
+              fontSize: "1.1rem",
+              textAlign: "center",
+              textDecoration: "none",
+              boxShadow: "0 4px 16px rgba(16, 185, 129, 0.3)",
+            }}
+          >
+            Entrar
+          </Link>
+        </div>
+      </div>
 
       {/* Decorative gradient bar */}
       {!scrolled && (
@@ -225,9 +358,21 @@ export default function Header({ onRegisterClick }: HeaderProps) {
             opacity: 0.5,
           }}
         />
-
-        
       )}
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .desktop-nav {
+            display: none !important;
+          }
+          .mobile-menu-btn {
+            display: block !important;
+          }
+          .mobile-menu {
+            display: block !important;
+          }
+        }
+      `}</style>
     </header>
   );
 }
